@@ -12,7 +12,7 @@
         {{-- TODO --}}
         <form
             style="--button-height: 3rem"
-            action=""
+            action="{{ route("cart.addOne", $product) }}"
             method="POST"
             class="-mt-[calc(var(--button-height)/2)] flex justify-center"
         >

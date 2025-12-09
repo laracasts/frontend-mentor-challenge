@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class CartItem extends Model
 {
+    protected $fillable = ['product_id', 'quantity'];
+
+    protected $touches = ['cart'];
+
     public function cart(): BelongsTo
     {
         return $this->belongsTo(Cart::class);
